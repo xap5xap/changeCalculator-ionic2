@@ -1,8 +1,8 @@
 import {Component, ViewChild} from '@angular/core';
 import {App, ionicBootstrap, Platform, Nav} from 'ionic-angular';
 import {StatusBar} from 'ionic-native';
-import {GettingStartedPage} from './pages/getting-started/getting-started';
-import {ListPage} from './pages/list/list';
+import {ExactAmountPage} from './pages/exact-amount/exact-amount';
+import {IWillPayPage} from './pages/i-will-pay/i-will-pay';
 
 
 @Component({
@@ -11,7 +11,7 @@ import {ListPage} from './pages/list/list';
 class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = GettingStartedPage;
+  rootPage: any = IWillPayPage;
   pages: Array<{title: string, component: any}>
 
   constructor(private platform: Platform) {
@@ -19,8 +19,8 @@ class MyApp {
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Getting Started', component: GettingStartedPage },
-      { title: 'List', component: ListPage }
+      { title: 'I will pay', component: IWillPayPage },
+      { title: 'Exact amount', component: ExactAmountPage }
     ];
 
   }
